@@ -1,5 +1,5 @@
 {
-  "name":"Motion Detect On Rule",
+  "name":"Evening Motion Detect On Rule",
   "conditions":[
     {
       "address": "/sensors/3/state/presence",
