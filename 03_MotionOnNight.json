@@ -11,23 +11,22 @@
       "operator": "ddx",
       "value": "PT00:00:00"
     },
-		{
-		  "address": "/sensors/1/state/daylight",
-		  "operator": "eq",
-		  "value": "false"
-		},
-		{
-		  "address": "/config/localtime",
-		  "operator": "in",
-		  "value": "T00:30:00/T12:30:00"
-		}
+    {
+      "address": "/sensors/1/state/daylight",
+      "operator": "eq",
+      "value": "false"
+    },
+    {
+      "address": "/config/localtime",
+      "operator": "in",
+      "value": "T00:30:00/T12:30:00"
+    }
    ],
    "actions":[
     {
       "address":"/groups/2/action",
       "method":"PUT",
       "body": {
-        "transitiontime": 25,
         "scene": "u8E0qxEL1vaaqqw"
       }
     },
@@ -35,7 +34,6 @@
       "address":"/groups/3/action",
       "method":"PUT",
       "body": {
-        "transitiontime": 25,
         "scene": "xZ4ZPxI41qhRaJD"
       }
     }
