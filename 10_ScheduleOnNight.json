@@ -14,6 +14,13 @@
    ],
    "actions":[
     {
+      "address":"/sensors/18/state",
+      "method":"PUT",
+      "body": {
+        "status": "1"
+      }
+    },
+    {
       "address":"/groups/2/action",
       "method":"PUT",
       "body": {
