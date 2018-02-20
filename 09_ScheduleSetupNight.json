@@ -1,0 +1,23 @@
+{
+  "name":"Night Schedule Setup Rule",
+  "conditions":[
+    {
+      "address": "/config/localtime",
+      "operator": "in",
+      "value": "T00:00:00/T00:29:00"
+    },
+    {
+      "address": "/sensors/18/state/status",
+      "operator": "gt",
+      "value": "0"
+    }
+   ],
+   "actions":[
+    {
+      "address":"/sensors/18/state",
+      "method":"PUT",
+      "body": {
+        "status": "0"
+      }
+    }
+]}
