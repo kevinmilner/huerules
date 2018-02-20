@@ -14,7 +14,7 @@
     {
       "address": "/sensors/1/state/daylight",
       "operator": "eq",
-      "value": "false"
+      "value": "true"
     },
     {
       "address": "/config/localtime",
