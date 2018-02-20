@@ -11,16 +11,11 @@
       "operator": "ddx",
       "value": "PT00:30:00"
     },
-		{
-		  "address": "/sensors/1/state/daylight",
-		  "operator": "eq",
-		  "value": "false"
-		},
-		{
-		  "address": "/config/localtime",
-		  "operator": "in",
-		  "value": "T00:30:00/T03:00:00"
-		}
+    {
+      "address": "/config/localtime",
+      "operator": "in",
+      "value": "T00:30:00/T03:00:00"
+    }
    ],
    "actions":[
     {
