@@ -1,0 +1,30 @@
+{
+  "name":"Night Schedule On Rule",
+  "conditions":[
+    {
+      "address": "/config/localtime",
+      "operator": "in",
+      "value": "T00:30:00/T03:00:00"
+    },
+    {
+      "address": "/sensors/18/state/status",
+      "operator": "eq",
+      "value": "0"
+    }
+   ],
+   "actions":[
+    {
+      "address":"/groups/2/action",
+      "method":"PUT",
+      "body": {
+        "scene": "NRye0yUlSlKEPO6"
+      }
+    },
+    {
+      "address":"/groups/3/action",
+      "method":"PUT",
+      "body": {
+        "on": "PF-IPXGvzi1E6FW"
+      }
+    }
+]}
