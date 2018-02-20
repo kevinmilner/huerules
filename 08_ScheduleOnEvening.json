@@ -1,15 +1,15 @@
 {
   "name":"Evening Schedule On Rule",
   "conditions":[
-		{
-		  "address": "/sensors/1/state/daylight",
-		  "operator": "eq",
-		  "value": "false"
-		},
-		{
-		  "address": "/sensors/1/state/lastupdated",
-		  "operator": "dx"
-		}
+    {
+      "address": "/sensors/1/state/daylight",
+      "operator": "eq",
+      "value": "false"
+    },
+    {
+      "address": "/sensors/1/state/lastupdated",
+      "operator": "dx"
+    }
    ],
    "actions":[
     {
