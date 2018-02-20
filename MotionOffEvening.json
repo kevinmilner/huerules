@@ -9,7 +9,7 @@
     {
       "address": "/sensors/3/state/presence",
       "operator": "ddx",
-      "value": "PT00:03:00"
+      "value": "PT00:30:00"
     },
 		{
 		  "address": "/sensors/1/state/daylight",
