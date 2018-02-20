@@ -1,0 +1,29 @@
+{
+  "name":"Evening Schedule On Rule",
+  "conditions":[
+		{
+		  "address": "/sensors/1/state/daylight",
+		  "operator": "eq",
+		  "value": "false"
+		},
+		{
+		  "address": "/sensors/1/state/lastupdated",
+		  "operator": "dx"
+		}
+   ],
+   "actions":[
+    {
+      "address":"/groups/2/action",
+      "method":"PUT",
+      "body": {
+        "scene": "u8E0qxEL1vaaqqw"
+      }
+    },
+    {
+      "address":"/groups/3/action",
+      "method":"PUT",
+      "body": {
+        "scene": "xZ4ZPxI41qhRaJD"
+      }
+    }
+]}
