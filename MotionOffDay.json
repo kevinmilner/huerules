@@ -1,0 +1,40 @@
+{
+  "name":"Day Motion Detect Off Rule",
+  "conditions":[
+    {
+      "address": "/sensors/3/state/presence",
+      "operator": "eq",
+      "value": "false"
+    },
+    {
+      "address": "/sensors/3/state/presence",
+      "operator": "ddx",
+      "value": "PT00:10:00"
+    },
+		{
+		  "address": "/sensors/1/state/daylight",
+		  "operator": "eq",
+		  "value": "false"
+		},
+		{
+		  "address": "/config/localtime",
+		  "operator": "in",
+		  "value": "T04:00:00/T22:00:00"
+		}
+   ],
+   "actions":[
+    {
+      "address":"/groups/2/action",
+      "method":"PUT",
+      "body": {
+        "on": "false"
+      }
+    },
+    {
+      "address":"/groups/3/action",
+      "method":"PUT",
+      "body": {
+        "on": "false"
+      }
+    },
+]}
