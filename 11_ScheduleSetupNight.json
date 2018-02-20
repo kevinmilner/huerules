@@ -1,0 +1,23 @@
+{
+  "name":"LateNight Schedule Setup Rule",
+  "conditions":[
+    {
+      "address": "/config/localtime",
+      "operator": "in",
+      "value": "T02:30:00/T02:59:00"
+    },
+    {
+      "address": "/sensors/18/state/status",
+      "operator": "gt",
+      "value": "0"
+    }
+   ],
+   "actions":[
+    {
+      "address":"/sensors/18/state",
+      "method":"PUT",
+      "body": {
+        "status": "0"
+      }
+    }
+]}
