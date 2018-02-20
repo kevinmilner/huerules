@@ -1,0 +1,40 @@
+{
+  "name":"Evening Motion Detect Off Rule",
+  "conditions":[
+    {
+      "address": "/sensors/3/state/presence",
+      "operator": "eq",
+      "value": "false"
+    },
+    {
+      "address": "/sensors/3/state/presence",
+      "operator": "ddx",
+      "value": "PT00:03:00"
+    },
+		{
+		  "address": "/sensors/1/state/daylight",
+		  "operator": "eq",
+		  "value": "false"
+		},
+		{
+		  "address": "/config/localtime",
+		  "operator": "in",
+		  "value": "T12:30:00/T00:30:00"
+		}
+   ],
+   "actions":[
+    {
+      "address":"/groups/2/action",
+      "method":"PUT",
+      "body": {
+        "scene": "u8E0qxEL1vaaqqw"
+      }
+    },
+    {
+      "address":"/groups/3/action",
+      "method":"PUT",
+      "body": {
+        "scene": "xZ4ZPxI41qhRaJD"
+      }
+    }
+]}
