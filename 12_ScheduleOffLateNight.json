@@ -1,0 +1,42 @@
+{
+  "name":"LateNight Schedule Off Rule",
+  "conditions":[
+    {
+      "address": "/config/localtime",
+      "operator": "in",
+      "value": "T03:00:00/T12:00:00"
+    },
+    {
+      "address": "/sensors/1/state/daylight",
+      "operator": "eq",
+      "value": "false"
+    },
+    {
+      "address": "/sensors/18/state/status",
+      "operator": "eq",
+      "value": "0"
+    }
+   ],
+   "actions":[
+    {
+      "address":"/sensors/18/state",
+      "method":"PUT",
+      "body": {
+        "status": "1"
+      }
+    },
+    {
+      "address":"/groups/2/action",
+      "method":"PUT",
+      "body": {
+        "on": "false"
+      }
+    },
+    {
+      "address":"/groups/3/action",
+      "method":"PUT",
+      "body": {
+        "on": "false"
+      }
+    }
+]}
