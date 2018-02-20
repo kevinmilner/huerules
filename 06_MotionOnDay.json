@@ -27,7 +27,6 @@
       "address":"/groups/2/action",
       "method":"PUT",
       "body": {
-        "transitiontime": 25,
         "scene": "Y8EQDIhhO9YJLoq"
       }
     }
