@@ -27,14 +27,14 @@
       "address":"/groups/2/action",
       "method":"PUT",
       "body": {
-        "on": "false"
+        "on": false
       }
     },
     {
       "address":"/groups/3/action",
       "method":"PUT",
       "body": {
-        "on": "false"
+        "on": false
       }
     }
 ]}
