@@ -4,7 +4,7 @@
     {
       "address": "/config/localtime",
       "operator": "in",
-      "value": "T00:30:00/T03:00:00"
+      "value": "T00:30:00/T02:29:00"
     },
     {
       "address": "/sensors/18/state/status",
