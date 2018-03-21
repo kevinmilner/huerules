@@ -1,5 +1,5 @@
 {
-  "name":"Day Motion Detect On Rule",
+  "name":"Day Bright Motion Detect On Rule",
   "conditions":[
     {
       "address": "/sensors/3/state/presence",
@@ -11,16 +11,21 @@
       "operator": "ddx",
       "value": "PT00:00:00"
     },
-		{
-		  "address": "/sensors/1/state/daylight",
-		  "operator": "eq",
-		  "value": "true"
-		},
-		{
-		  "address": "/config/localtime",
-		  "operator": "in",
-		  "value": "T04:00:00/T22:00:00"
-		}
+    {
+      "address": "/sensors/4/state/dark",
+      "operator": "eq",
+      "value": "false"
+    },
+    {
+      "address": "/sensors/1/state/daylight",
+      "operator": "eq",
+      "value": "true"
+    },
+    {
+      "address": "/config/localtime",
+      "operator": "in",
+      "value": "T04:00:00/T22:00:00"
+    }
    ],
    "actions":[
     {
